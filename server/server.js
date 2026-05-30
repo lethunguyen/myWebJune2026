@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
-const port = 9999;
+const port = 8888;
 
 app.listen(port, ()=> {
     console.log("server is running on ", port);
 });
-app.get('/api/get', (res, req)=>{
+app.get('/api/get', (req, res)=>{
     req.json({
         "message":"test successfully", 
         "id":"md001"      
@@ -18,7 +18,7 @@ app.post('/api/post', (req, res)=>{
     headers = req.headers;
     headerID = req.headers['headerID'];
     //req.query
-    param = req.query.paramID
+    param = req.query.paramID;
     console.log("Data log from User : ", body, headers, headerID, param)    
     res.json({
         'message':'post',
