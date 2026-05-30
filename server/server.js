@@ -2,6 +2,11 @@ const express = require('express');
 const app = express();
 const port = 8888;
 
+// Parse JSON and URL-encoded bodies
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+
 app.listen(port, ()=> {
     console.log("server is running on ", port);
 });
