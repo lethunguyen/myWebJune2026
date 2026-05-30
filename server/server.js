@@ -21,7 +21,7 @@ app.post('/api/post', (req, res)=>{
     body = req.body;
     //req.headers
     headers = req.headers;
-    headerID = req.headers['headerID'];
+    headerID = req.headers['headerid'];
     //req.query
     param = req.query.paramID;
     console.log("Data log from User : ", body, headers, headerID, param)    
