@@ -99,3 +99,8 @@ MariaDB [STUDENTSREG]>
 sudo mariadb -u root
 CREATE USER 'nglthu'@'localhost' IDENTIFIED BY 'Vbb21dec';
 ```
+
+# Service active
+```
+service mariadb start
+```
