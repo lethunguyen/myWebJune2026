@@ -93,3 +93,9 @@ MariaDB [STUDENTSREG]>
 ```
 
 ```
+# create password for mariadb
+
+```
+sudo mariadb -u root
+CREATE USER 'nglthu'@'localhost' IDENTIFIED BY 'Vbb21dec';
+```
