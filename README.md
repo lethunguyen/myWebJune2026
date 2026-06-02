@@ -44,3 +44,46 @@ MariaDB [(none)]> show databases;
 
 MariaDB [(none)]> 
 ```
+
+# TEST STUDENTSREG.sql
+
+```
+MariaDB [STUDENTSREG]> 
+MariaDB [STUDENTSREG]> 
+MariaDB [STUDENTSREG]>     show tables;
++-----------------------+
+| Tables_in_STUDENTSREG |
++-----------------------+
+| LEARN_PREFERENCE      |
+| MODULES               |
+| STUDENT               |
+| STUDENT_ENROLEMENT    |
+| TOPICS                |
+| TUTOR                 |
++-----------------------+
+6 rows in set (0.000 sec)
+
+MariaDB [STUDENTSREG]> select * from student;
+ERROR 1146 (42S02): Table 'STUDENTSREG.student' doesn't exist
+MariaDB [STUDENTSREG]> select * from STUDENT;
++------+--------------------------+-------------+----------+
+| SID  | SNAME                    | EMAIL       | Tutor_Id |
++------+--------------------------+-------------+----------+
+| 1000 | Abdul Basit Chaudhry     | abc@abc.com | 1003     |
+| 1001 | Daniel Everret Fernandes | def@def.com | 1000     |
+| 1002 | Gigi Hadi Ingram         | ghi@ghi.com | 1001     |
+| 1003 | Jacob Knowle Lewis       | jkl@jkl.com | 1002     |
+| 1004 | Martin Newton Oolu       | mno@mno.com | 1002     |
+| 1005 | Patrick Quinn Rogers     | pqr@pqr.com | 1002     |
+| 1006 | Shabaz Tanveer Ucch      | stu@stu.com | 1001     |
+| 1007 | Umar Victor Qayyum       | uvq@stu.com | 1001     |
+| 1008 | Qais Russell Stuart      | qrs@qrs.com | 1000     |
+| 1009 | Rachel Shaw Trump        | rst@rst.com | 1000     |
+| 1010 | Tania Uno Victoria       | tuv@tuv.com | 1000     |
+| 1011 | Umber Vishal Xavier      | uvx@uvx.com | 1002     |
+| 1012 | James Baker              | jb@jb.com   | NULL     |
++------+--------------------------+-------------+----------+
+13 rows in set (0.000 sec)
+
+MariaDB [STUDENTSREG]> 
+```
