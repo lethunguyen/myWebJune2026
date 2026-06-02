@@ -10,9 +10,9 @@ const { connection,
     establishConnection,
     query,
     commitQuery,
-    endConnection, } = require('./database/localdb')
+    endConnection, } = require('/workspaces/myWebJune2026/database/localdb');
 
-const {sql} = require('./database/query')    
+const {sql} = require('/workspaces/myWebJune2026/database/query');    
 
 app.listen(port, () => {
     console.log("server is running on ", port);
