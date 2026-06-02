@@ -1,8 +1,8 @@
-# myWebJune2026
+# Virtual machine with web hosting and MariaDB
 
-# install MariaDb on virtual machine ubuntu
+# Install MariaDb on Virtual Machine ubuntu
 
-Install Mariadb
+## Install Mariadb (Cài đặt MariaDB)
 
 ```
 sudo apt update
@@ -10,17 +10,21 @@ sudo apt install mariadb-server -y
 
 ```
 
-Test running service
+## Khởi động running service (Khởi động dịch vụ)
+
+Service mariadb start
 
 ```
-
 @lethunguyen ➜ /workspaces/myWebJune2026 (main) $ sudo -s
+//active mariadb
 root ➜ /workspaces/myWebJune2026 (main) $ service mariadb start
 ```
 
-login
-```
+## Login in the Root account (Truy cập vào tài khoản Root)
 
+user = root
+password = None (Không có)
+```
 root ➜ /workspaces/myWebJune2026 (main) $ mysql -u root -p
 Enter password: 
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
@@ -45,7 +49,7 @@ MariaDB [(none)]> show databases;
 MariaDB [(none)]> 
 ```
 
-# TEST STUDENTSREG.sql
+# TEST STUDENTSREG.sql (Chạy file Studentsreg.sql)
 
 ```
 MariaDB [STUDENTSREG]> 
@@ -88,19 +92,22 @@ MariaDB [STUDENTSREG]> select * from STUDENT;
 MariaDB [STUDENTSREG]> 
 ```
 
-# Server and Db connection
+# Grant/create user account with password in mariadb server
 
-```
-
-```
-# create password for mariadb
+e.g 
+user = nglthu
+password = Vbb21dec
+Grant all privileges to this "nglthu"
 
 ```
 sudo mariadb -u root
-CREATE USER 'nglthu'@'localhost' IDENTIFIED BY 'Vbb21dec';
+MariaDB [(none)]>CREATE USER 'nglthu'@'localhost' IDENTIFIED BY 'Vbb21dec';
+MariaDB [(none)]> GRANT ALL PRIVILEGES ON *.* TO 'nglthu'@'localhost' WITH GRANT OPTION;
 ```
 
-# Service active
+# Active the service
+
 ```
 service mariadb start
 ```
+
