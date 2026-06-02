@@ -87,3 +87,9 @@ MariaDB [STUDENTSREG]> select * from STUDENT;
 
 MariaDB [STUDENTSREG]> 
 ```
+
+# Server and Db connection
+
+```
+
+```
